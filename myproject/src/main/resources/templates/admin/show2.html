@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SpringBoot thymeleaf"/>
+    <meta name="author" content="YiHui"/>
+    <title>Title</title>
+
+    <link rel="stylesheet" href="/css/thIndex.css"/>
+</head>
+<body>
+<div>
+    <div class="content" th:text="'欢迎访问' + ${name}">默认的内容</div>
+    <br/>
+    <div class="sign" th:text="'当前时间' + ${now}">默认的签名</div>
+</div>
+
+</body>
+</html>

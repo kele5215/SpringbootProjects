@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<!--viewport标记，用于指定用户是否可以缩放Web页面，并对相关的选项进行设定。-->
+
+<!--width 和height 指令分别指定视区的逻辑宽度和高度。它们的值可以是以像素为单位的数字，也可以是一个特殊的标记符号。如上文代码中device-width即表示，视区宽度应为设备的屏幕宽度。类似的，device-height即表示设备的屏幕高度。-->
+
+<!--initial-scale用于设置Web页面的初始缩放比例。默认的初始缩放比例值因智能手机浏览器的不同而有所差异，通常情况下，设备会在浏览器中呈现出整个Web页面。设为1.0则显示未经缩放的Web页面。-->
+
+<!--maximum-scale和minimum-scale用于设置用户对于Web页面缩放比例的限制。值的范围为0.25~10.0之间-->
+
+<!--user-scalable指定用户是否可以缩放视区，即缩放Web页面的视图。值为yes时允许用户进行缩放，值为no时不允许缩放。-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="SpringBoot thymeleaf"/>
+    <meta name="author" content="YiHui"/>
+    <title>Title</title>
+
+    <link rel="stylesheet" href="/css/thIndex.css"/>
+</head>
+<body>
+<div>
+    <div class="title">hello world!</div>
+    <br/>
+    <div class="content" th:text="'欢迎访问' + ${name}">默认的内容</div>
+    <br/>
+    <div class="sign" th:text="'当前时间' + ${now}">默认的签名</div>
+    <br/>
+    <a href="show1">传参2测试</a> &nbsp;&nbsp;&nbsp;&nbsp;
+    <a href="show2">传参3测试</a>
+</div>
+
+</body>
+</html>
